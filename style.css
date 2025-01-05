@@ -1,0 +1,59 @@
+
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+        :root {
+            --pixel-bg: #1e1e1e;
+            --pixel-light: #e5097f;
+            --pixel-dark: #730255;
+        }
+
+        body {
+            background: var(--pixel-bg);
+            color: white;
+            font-family: 'Press Start 2P', monospace;
+        }
+
+        .retro-font {
+            font-size: 16px;
+            text-shadow: 0px 0px 5px var(--pixel-light), 0px 0px 10px var(--pixel-dark);
+        }
+
+        header h1 {
+            font-size: 2em;
+            color: var(--pixel-light);
+            animation: glow 2s infinite;
+        }
+
+        .btn-pixel {
+            border: 2px solid var(--pixel-light);
+            background: var(--pixel-dark);
+            color: white;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            text-transform: uppercase;
+            transition: transform 0.3s, background 0.3s;
+        }
+
+        .btn-pixel:hover {
+            transform: scale(1.1);
+            background: var(--pixel-light);
+        }
+
+        @keyframes glow {
+            0%, 100% {
+                text-shadow: 0px 0px 5px var(--pixel-light), 0px 0px 10px var(--pixel-dark);
+            }
+            50% {
+                text-shadow: 0px 0px 20px var(--pixel-light), 0px 0px 30px var(--pixel-dark);
+            }
+        }
+
+        #particleCanvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
